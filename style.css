@@ -191,6 +191,20 @@ h1, h2 {
 }
 
 /* ===== INVITE ===== */
+.invite-lead {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-brown);
+  margin-bottom: 14px;
+}
+
+.invite-lead--small {
+  font-size: 1.05rem;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
 .invite-text {
   font-size: 1.2rem;
   line-height: 1.6;
