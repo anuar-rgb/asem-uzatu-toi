@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Әсем ұзату той</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bg-music" src="assets/audio/song.mp3" preload="none" loop></audio>
+
+<!-- ЭКРАН 1 — HERO -->
+<section class="screen hero" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content reveal">
+    <h1 class="hero-title">Қыз ұзату той</h1>
+    <p class="hero-name">Әсем</p>
+    <div class="hero-divider" aria-hidden="true">
+      <svg viewBox="0 0 120 20" width="120" height="20"><path d="M0 10 H45 M75 10 H120" stroke="currentColor" stroke-width="1"/><circle cx="60" cy="10" r="5" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+    </div>
+    <p class="hero-date">16.10.2026</p>
+    <p class="hero-time">18:00</p>
+
+    <div class="countdown" id="countdown" aria-label="Тойға дейін қалған уақыт">
+      <div class="cd-item"><span class="cd-num" id="cd-days">00</span><span class="cd-label">күн</span></div>
+      <div class="cd-item"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">сағат</span></div>
+      <div class="cd-item"><span class="cd-num" id="cd-minutes">00</span><span class="cd-label">минут</span></div>
+      <div class="cd-item"><span class="cd-num" id="cd-seconds">00</span><span class="cd-label">секунд</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint reveal" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</section>
+
+<!-- ЭКРАН 2 — ШАҚЫРУ -->
+<section class="screen invite" id="invite">
+  <div class="ornament-frame reveal">
+    <div class="corner corner-tl" aria-hidden="true"></div>
+    <div class="corner corner-tr" aria-hidden="true"></div>
+    <div class="corner corner-bl" aria-hidden="true"></div>
+    <div class="corner corner-br" aria-hidden="true"></div>
+
+    <h2 class="section-title">Шақыру</h2>
+
+    <!-- TODO: текст повреждён при передаче (кодировка) — ждём точный текст от пользователя -->
+    <p class="invite-text">
+      Құрметті достар мен туыстар!
+    </p>
+
+    <p class="invite-caps">
+      Сіздерді өмірімізде естен кетпес осы қуанышты сәтке шақырамыз!
+    </p>
+
+    <div class="toi-iesi">
+      <p class="toi-role">Роза</p>
+      <p class="toi-role">Айнель</p>
+    </div>
+
+    <p class="invite-footer">Қуанышымызды сіздермен бөлісуге асығамыз!</p>
+  </div>
+</section>
+
+<!-- ЭКРАН 3 — ДАТА И МЕСТО -->
+<section class="screen venue" id="venue">
+  <div class="ornament-frame reveal">
+    <div class="corner corner-tl" aria-hidden="true"></div>
+    <div class="corner corner-tr" aria-hidden="true"></div>
+    <div class="corner corner-bl" aria-hidden="true"></div>
+    <div class="corner corner-br" aria-hidden="true"></div>
+
+    <h2 class="section-title">Той өтетін орын</h2>
+
+    <p class="venue-hall">Mariya Plaza</p>
+    <p class="venue-date">16.10.2026</p>
+    <p class="venue-time">18:00</p>
+
+    <a class="map-btn" href="https://go.2gis.com/akKxh" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z" fill="currentColor"/></svg>
+      2ГИС-тен ашу
+    </a>
+  </div>
+</section>
+
+<!-- ЭКРАН 4 — МУЗЫКА -->
+<section class="screen music" id="music">
+  <div class="ornament-frame reveal music-frame">
+    <div class="corner corner-tl" aria-hidden="true"></div>
+    <div class="corner corner-tr" aria-hidden="true"></div>
+    <div class="corner corner-bl" aria-hidden="true"></div>
+    <div class="corner corner-br" aria-hidden="true"></div>
+
+    <h2 class="section-title">Ән</h2>
+    <p class="music-hint">Әуенді тыңдау үшін басыңыз</p>
+
+    <button class="music-btn" id="music-toggle" type="button" aria-label="Әуенді қосу немесе тоқтату" aria-pressed="false">
+      <svg class="note-icon" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">
+        <path d="M9 18V5l12-2v13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="18" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </div>
+</section>
+
+<!-- ЭКРАН 5 — RSVP -->
+<section class="screen rsvp" id="rsvp">
+  <div class="rsvp-card reveal">
+    <h2 class="rsvp-title">Бізбен боласыз ба?</h2>
+    <p class="rsvp-subtitle">Қатысатыныңызды растап, хабарласап жіберуіңізді сұраймыз — бұл біз үшін өте маңызды.</p>
+
+    <form id="rsvp-form" novalidate>
+      <label class="field">
+        <span class="field-label">Есіміңіз *</span>
+        <input type="text" id="rsvp-name" name="name" placeholder="Есіміңізді жазыңыз" required>
+      </label>
+
+      <fieldset class="field radio-field">
+        <legend class="field-label">Тойға келесіз бе? *</legend>
+        <label class="radio-option">
+          <input type="radio" name="status" value="Келемін" required>
+          <span class="radio-dot" aria-hidden="true"></span>
+          <span>Келемін</span>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="status" value="Құбымен келемін">
+          <span class="radio-dot" aria-hidden="true"></span>
+          <span>Құбымен келемін</span>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="status" value="Өкінішке орай келе алмаймын">
+          <span class="radio-dot" aria-hidden="true"></span>
+          <span>Өкінішке орай келе алмаймын</span>
+        </label>
+      </fieldset>
+
+      <label class="field">
+        <span class="field-label">Қанша қонақпен келесіз?</span>
+        <input type="text" id="rsvp-guests" name="guests" placeholder="мысалы: 2">
+      </label>
+
+      <button type="submit" class="rsvp-submit" id="rsvp-submit">ЖІБЕРУ</button>
+    </form>
+
+    <div class="rsvp-thanks" id="rsvp-thanks" hidden>
+      <p>Рахмет! Жауабыңыз қабылданды 🌸</p>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
