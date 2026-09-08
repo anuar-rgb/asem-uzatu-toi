@@ -21,8 +21,7 @@
   right: 0;
   width: 175px;
   height: 175px;
-  color: var(--accent-gold);
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: 0;
   pointer-events: none;
 }
@@ -539,7 +538,7 @@ h1, h2 {
   position: absolute;
   width: 190px;
   height: 190px;
-  color: rgba(212, 175, 106, 0.5);
+  opacity: 0.65;
   z-index: 0;
   pointer-events: none;
 }
