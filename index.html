@@ -11,6 +11,27 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="oyu-motif">
+      <g transform="translate(150,150)" fill="none" stroke="currentColor" stroke-width="2">
+        <ellipse cx="0" cy="-20" rx="7" ry="20" transform="rotate(0)"/>
+        <ellipse cx="0" cy="-20" rx="7" ry="20" transform="rotate(60)"/>
+        <ellipse cx="0" cy="-20" rx="7" ry="20" transform="rotate(120)"/>
+        <ellipse cx="0" cy="-20" rx="7" ry="20" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-20" rx="7" ry="20" transform="rotate(240)"/>
+        <ellipse cx="0" cy="-20" rx="7" ry="20" transform="rotate(300)"/>
+        <circle r="6" fill="currentColor" stroke="none"/>
+      </g>
+      <path d="M150,150 C176,158 200,148 208,172 C213,188 198,202 182,194 C172,189 174,176 188,177" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="182" cy="194" r="3.5" fill="currentColor"/>
+      <path d="M150,150 C142,176 152,200 128,208 C112,213 98,198 106,182 C111,172 124,174 123,188" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="106" cy="182" r="3.5" fill="currentColor"/>
+      <path d="M150,150 C160,168 158,190 176,206" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </g>
+  </defs>
+</svg>
+
 <audio id="bg-music" src="assets/audio/song.mp3" preload="none" loop></audio>
 
 <!-- ПОСТОЯННАЯ КНОПКА МУЗЫКИ (фиксирована в правом верхнем углу на всех экранах) -->
@@ -25,6 +46,7 @@
 <!-- ЭКРАН 1 — HERO -->
 <section class="screen hero" id="hero">
   <div class="hero-overlay"></div>
+  <svg class="corner-ornament" viewBox="0 0 220 220" aria-hidden="true"><use href="#oyu-motif"/></svg>
   <div class="hero-content reveal">
     <h1 class="hero-title">Қыз ұзату той</h1>
     <p class="hero-name">Асем</p>
@@ -46,6 +68,7 @@
 
 <!-- ЭКРАН 2 — ШАҚЫРУ -->
 <section class="screen invite" id="invite">
+  <svg class="corner-ornament" viewBox="0 0 220 220" aria-hidden="true"><use href="#oyu-motif"/></svg>
   <div class="ornament-frame reveal">
     <div class="corner corner-tl" aria-hidden="true"></div>
     <div class="corner corner-tr" aria-hidden="true"></div>
@@ -79,6 +102,7 @@
 
 <!-- ЭКРАН 3 — ДАТА И МЕСТО -->
 <section class="screen venue" id="venue">
+  <svg class="corner-ornament" viewBox="0 0 220 220" aria-hidden="true"><use href="#oyu-motif"/></svg>
   <div class="venue-card reveal">
     <div class="venue-photo" style="background-image: url('assets/images/venue-hall.jpg')"></div>
 
@@ -102,6 +126,7 @@
 
 <!-- ЭКРАН 5 — RSVP -->
 <section class="screen rsvp" id="rsvp">
+  <svg class="corner-ornament" viewBox="0 0 220 220" aria-hidden="true"><use href="#oyu-motif"/></svg>
   <div class="rsvp-card reveal">
     <h2 class="rsvp-title">Бізбен боласыз ба?</h2>
     <p class="rsvp-subtitle">Қатысатыныңызды растап, хабарласап жіберуіңізді сұраймыз — бұл біз үшін өте маңызды.</p>
