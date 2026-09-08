@@ -45,7 +45,7 @@ h1, h2 {
 
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(160deg, #6b4426 0%, #4a3323 55%, #3a2818 100%);
+  background: linear-gradient(160deg, #c9a26c 0%, #a9764a 55%, #8a5a35 100%);
   color: #fff;
   padding-top: 64px;
 }
@@ -53,7 +53,7 @@ h1, h2 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 28%, rgba(0,0,0,0) 0%, rgba(20,12,6,0.35) 100%);
+  background: radial-gradient(ellipse at 50% 28%, rgba(0,0,0,0) 0%, rgba(20,12,6,0.22) 100%);
 }
 
 .hero-badge {
