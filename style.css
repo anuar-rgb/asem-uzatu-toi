@@ -45,9 +45,7 @@ h1, h2 {
 
 /* ===== HERO ===== */
 .hero {
-  background-image: url('assets/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center 20%;
+  background: linear-gradient(160deg, #6b4426 0%, #4a3323 55%, #3a2818 100%);
   color: #fff;
   padding-top: 64px;
 }
@@ -55,7 +53,7 @@ h1, h2 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(30,18,10,0.35) 0%, rgba(30,18,10,0.55) 55%, rgba(30,18,10,0.75) 100%);
+  background: radial-gradient(ellipse at 50% 28%, rgba(0,0,0,0) 0%, rgba(20,12,6,0.35) 100%);
 }
 
 .hero-badge {
