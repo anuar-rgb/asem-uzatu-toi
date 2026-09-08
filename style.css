@@ -309,8 +309,8 @@ h1, h2 {
   top: 16px;
   right: 16px;
   z-index: 100;
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 2px solid var(--accent-gold);
   background: var(--btn-bg);
@@ -348,7 +348,7 @@ h1, h2 {
   border: 1px solid rgba(90, 60, 33, 0.3);
   border-radius: 10px;
   padding: 40px 26px;
-  margin-top: 150px;
+  margin-top: 40px;
   box-shadow: 0 12px 30px rgba(74, 51, 35, 0.15);
 }
 
