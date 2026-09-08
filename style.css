@@ -17,8 +17,8 @@
 
 .corner-ornament {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
   width: 175px;
   height: 175px;
   opacity: 0.5;
@@ -525,130 +525,6 @@ h1, h2 {
   font-size: 1.3rem;
   color: var(--text-brown);
   font-family: 'Playfair Display', serif;
-}
-
-/* ===== OUTRO (closing screen) ===== */
-.outro {
-  background: radial-gradient(ellipse at 50% 0%, #8a1930 0%, #5c0f22 55%, #4a0c1c 100%);
-  color: #f5e6d3;
-  overflow: hidden;
-}
-
-.outro-ornament {
-  position: absolute;
-  width: 190px;
-  height: 190px;
-  opacity: 0.65;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.outro-ornament--tl {
-  top: 0;
-  left: 0;
-  transform: rotate(180deg);
-}
-
-.outro-ornament--tr {
-  top: 0;
-  right: 0;
-  transform: scaleY(-1);
-}
-
-.outro-ornament--bl {
-  bottom: 0;
-  left: 0;
-  transform: scaleX(-1);
-}
-
-.outro-ornament--br {
-  bottom: 0;
-  right: 0;
-}
-
-.outro-top-link {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(245, 230, 211, 0.1);
-  border: 1px solid rgba(245, 230, 211, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #f5e6d3;
-  text-decoration: none;
-}
-
-.outro-content {
-  position: relative;
-  z-index: 1;
-  max-width: 400px;
-  width: 100%;
-}
-
-.outro-monogram {
-  width: 84px;
-  height: 84px;
-  margin: 0 auto 24px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #7a1128, #5c0f22);
-  border: 2px solid var(--accent-gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--accent-gold);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.outro-eyebrow {
-  font-size: 0.78rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: rgba(245, 230, 211, 0.85);
-  margin-bottom: 16px;
-}
-
-.outro-name {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 700;
-  font-size: clamp(2.6rem, 12vw, 3.6rem);
-  margin-bottom: 18px;
-}
-
-.outro-meta {
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  opacity: 0.85;
-  margin-bottom: 8px;
-}
-
-.outro-venue {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.3rem;
-  margin-bottom: 28px;
-}
-
-.outro-divider {
-  width: 60px;
-  height: 1px;
-  background: rgba(245, 230, 211, 0.4);
-  margin: 0 auto 26px;
-}
-
-.outro-signature {
-  font-size: 1.05rem;
-  letter-spacing: 0.03em;
-  opacity: 0.9;
 }
 
 /* ===== SCROLL REVEAL ===== */
