@@ -159,10 +159,9 @@ h1, h2 {
   50% { transform: translate(-50%, 8px); }
 }
 
-/* ===== ORNAMENT SECTIONS (invite / venue / music) ===== */
+/* ===== ORNAMENT SECTIONS (invite / venue) ===== */
 .invite,
-.venue,
-.dresscode {
+.venue {
   background-image: url('assets/images/section-bg.jpg');
   background-size: cover;
   background-position: center;
@@ -379,18 +378,6 @@ h1, h2 {
 .map-btn:active {
   transform: scale(0.97);
   background-color: rgba(90, 60, 33, 0.06);
-}
-
-/* ===== MUSIC ===== */
-.dresscode-text {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: var(--text-brown);
-  margin-bottom: 14px;
-}
-
-.dresscode-text:last-child {
-  margin-bottom: 0;
 }
 
 /* ===== FLOATING MUSIC BUTTON (fixed, all screens) ===== */
