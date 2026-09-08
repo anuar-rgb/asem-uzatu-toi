@@ -1,6 +1,10 @@
-// TODO: вставить реальную ссылку на Google Apps Script Web App после деплоя.
-// Пример: https://script.google.com/macros/s/AKfycbxxxxxxxxxxxxxxxxxxxxxxxxxx/exec
-const APPS_SCRIPT_URL = "ВСТАВЬТЕ_ССЫЛКУ_СЮДА";
+// Гугл-форма для сбора RSVP-ответов (id полей найдены в исходнике формы).
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeh3VDdYGMi0-e1C_Gu61NHqefy1v21CuAv6owygT3kxXKstw/formResponse";
+const GOOGLE_FORM_ENTRIES = {
+  name: "entry.692230155",
+  status: "entry.797045748",
+  guests: "entry.1172029627"
+};
 
 /* ===== COUNTDOWN ===== */
 const TARGET_DATE = new Date("2026-10-16T18:00:00+05:00").getTime();
@@ -93,21 +97,19 @@ rsvpForm.addEventListener('submit', async (e) => {
     return;
   }
 
-  const payload = {
-    name: name,
-    status: statusInput.value,
-    guests: guests
-  };
+  const body = new URLSearchParams();
+  body.set(GOOGLE_FORM_ENTRIES.name, name);
+  body.set(GOOGLE_FORM_ENTRIES.status, statusInput.value);
+  body.set(GOOGLE_FORM_ENTRIES.guests, guests);
 
   rsvpSubmit.disabled = true;
   rsvpSubmit.textContent = 'ЖІБЕРІЛУДЕ...';
 
   try {
-    await fetch(APPS_SCRIPT_URL, {
+    await fetch(GOOGLE_FORM_URL, {
       method: 'POST',
       mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: body
     });
   } catch (err) {
     // no-cors режим не даёт прочитать ответ/ошибку сервера — считаем отправленным
