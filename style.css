@@ -303,9 +303,14 @@ h1, h2 {
   margin-bottom: 30px;
 }
 
-.music-btn {
-  width: 92px;
-  height: 92px;
+/* ===== FLOATING MUSIC BUTTON (fixed, all screens) ===== */
+.music-fab {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 2px solid var(--accent-gold);
   background: var(--btn-bg);
@@ -314,15 +319,15 @@ h1, h2 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 8px 22px rgba(74, 51, 35, 0.3);
+  box-shadow: 0 8px 22px rgba(74, 51, 35, 0.35);
   transition: transform 0.2s ease;
 }
 
-.music-btn:active {
-  transform: scale(0.95);
+.music-fab:active {
+  transform: scale(0.96);
 }
 
-.music-btn.playing .note-icon {
+.music-fab.playing .note-icon {
   animation: pulse 1.6s ease-in-out infinite;
 }
 
@@ -343,6 +348,7 @@ h1, h2 {
   border: 1px solid rgba(90, 60, 33, 0.3);
   border-radius: 10px;
   padding: 40px 26px;
+  margin-top: 150px;
   box-shadow: 0 12px 30px rgba(74, 51, 35, 0.15);
 }
 
