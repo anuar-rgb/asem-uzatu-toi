@@ -262,42 +262,123 @@ h1, h2 {
 }
 
 /* ===== VENUE ===== */
-.venue-hall {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+.kazakh-ornament {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  color: rgba(184, 147, 90, 0.3);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.kazakh-ornament--left {
+  bottom: 16px;
+  left: 6px;
+}
+
+.kazakh-ornament--right {
+  bottom: 16px;
+  right: 6px;
+  transform: scaleX(-1);
+}
+
+.venue-card {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255, 253, 248, 0.9);
+  border: 1px solid rgba(90, 60, 33, 0.25);
+  border-radius: 20px;
+  padding: 76px 26px 36px;
+  margin-top: 66px;
+  box-shadow: 0 14px 32px rgba(74, 51, 35, 0.12);
+}
+
+.venue-photo {
+  position: absolute;
+  top: -66px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50% / 42%;
+  border: 3px solid var(--accent-gold);
+  box-shadow: 0 10px 24px rgba(74, 51, 35, 0.3);
+}
+
+.venue-pin {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  box-shadow: 0 4px 10px rgba(74, 51, 35, 0.2);
+}
+
+.venue-label {
+  margin-top: 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-brown);
 }
 
-.venue-date,
-.venue-time {
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
+.venue-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 9vw, 3rem);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 8px;
 }
 
-.venue-time {
-  margin-bottom: 24px;
+.venue-datetime {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: var(--text-brown);
+  margin-top: 10px;
   opacity: 0.85;
+}
+
+.venue-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--text-dark);
+  margin: 20px 0 28px;
 }
 
 .map-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--btn-bg);
-  color: var(--btn-text);
+  background: transparent;
+  color: var(--text-brown);
   text-decoration: none;
-  padding: 14px 28px;
+  padding: 13px 28px;
+  border: 1.5px solid var(--text-brown);
   border-radius: 999px;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.03em;
-  box-shadow: 0 6px 18px rgba(74, 51, 35, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .map-btn:active {
   transform: scale(0.97);
+  background-color: rgba(90, 60, 33, 0.06);
 }
 
 /* ===== MUSIC ===== */
