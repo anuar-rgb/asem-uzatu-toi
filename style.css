@@ -58,6 +58,19 @@ h1, h2 {
   background: linear-gradient(180deg, rgba(30,18,10,0.35) 0%, rgba(30,18,10,0.55) 55%, rgba(30,18,10,0.75) 100%);
 }
 
+.hero-eye-blur {
+  position: absolute;
+  top: 28%;
+  left: 38%;
+  width: 40%;
+  height: 12%;
+  z-index: 1;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
 .hero-content {
   position: relative;
   z-index: 1;
