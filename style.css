@@ -162,9 +162,6 @@ h1, h2 {
 /* ===== ORNAMENT SECTIONS (invite / venue) ===== */
 .invite,
 .venue {
-  background-image: url('assets/images/section-bg.jpg');
-  background-size: cover;
-  background-position: center;
   background-color: var(--bg-cream);
 }
 
